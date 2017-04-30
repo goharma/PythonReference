@@ -60,11 +60,11 @@ sorted(a, key=itemgetter(1))
 
 ### Sort by key instead of index
 ```python
-# 
-# DOES NOT WORK
-a = [{'name':'Koy', 'age': 43},{'name':'Nathan', 'age': 11}]
+a = [{'name':'Zae', 'age':10}, {'name':'Koy', 'age': 43},{'name':'Nathan', 'age': 11},{'name':'Abigale', 'age':4}]
 
-sorted(a, key=itemgetter(1))
+sorted(a, key=itemgetter('name'))
+# OUT: [{'age': 4, 'name': 'Abigale'}, {'age': 43, 'name': 'Koy'}, {'age': 11, 'name': 'Nathan'}, {'age': 10, 'name': 'Zae'}]
+
 ```
 ### You have to create a class 
 ```python
@@ -86,7 +86,7 @@ student_objects = [
         
 sorted(student_objects, key=lambda student: student.age)
         
-# OUT:         
+# OUT: [('dave', 'B', 10), ('jane', 'B', 12), ('john', 'A', 15)]         
 ```
 
 
