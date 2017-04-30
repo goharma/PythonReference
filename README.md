@@ -8,8 +8,11 @@ print "This is how to print a string %s " % my_var
 ### tuple <-> list
 
 | FROM/TO | tuple | list | set | dict |
-| --- | --- | --- | --- | --- |
-| 1 | 2 | 3 | 4 | 5 |
+| ---     | --- | --- | --- | --- |
+| tuple   | 2 | 3 | 4 | 5 |
+| list    | 2 | 3 | 4 | 5 |
+| set     | 2 | 3 | 4 | 5 |
+| dict    | 2 | 3 | 4 | 5 |
 
 ## Iteration
 ### 
