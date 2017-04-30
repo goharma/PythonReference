@@ -23,3 +23,16 @@ print "This is how to print a string %s " % my_var
 
 ## pythn symbols
 https://learnpythonthehardway.org/book/ex37.html
+
+## 
+https://stackedit.io/editor
+```flow
+st=>start: Start
+e=>end
+op=>operation: My Operation
+cond=>condition: Yes or No?
+
+st->op->cond
+cond(yes)->e
+cond(no)->op
+```
