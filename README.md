@@ -1,19 +1,21 @@
-# PythonReference
-
-## Commonly used
+# Commonly used
 ```python
 values=('val1', 'val2', 'valn')
 print "This is how to print a string %s %s %s" % values
 ```
 
+# Data Structures
+## List Comprehensions
+
+## 
 
 ## Conversions
-| FROM/TO | tuple | list | set | dict |
-| ---     | --- | --- | --- | --- |
-| tuple   |   | list(tuple) | 4 | 5 |
-| list    | list(tuple) |   | 4 | 5 |
-| set     | set(t) | 3 |   | 5 |
-| dict    | 2 | 3 | 4 |   |
+| FROM/TO | tuple                      | list        | set | dict |
+| ------- | -------------------------- | ----------- | --- | --- |
+| tuple   |                            | list(tuple) | 4 | 5 |
+| list    | list(tuple)                |             | 4 | 5 |
+| set     | set(t)                     | 3           |   | 5 |
+| dict    | dict(zip((1,2,3),(a,b,c))) | 3           | 4 |   |
 
 ## Iteration
 ### For each in list
@@ -63,10 +65,18 @@ sorted(a, key=itemgetter(1))
 a = [{'name':'Zae', 'age':10}, {'name':'Koy', 'age': 43},{'name':'Nathan', 'age': 11},{'name':'Abigale', 'age':4}]
 
 sorted(a, key=itemgetter('name'))
-# OUT: [{'age': 4, 'name': 'Abigale'}, {'age': 43, 'name': 'Koy'}, {'age': 11, 'name': 'Nathan'}, {'age': 10, 'name': 'Zae'}]
+# OUT: [
+#       {'age': 4, 'name': 'Abigale'}, 
+#       {'age': 43, 'name': 'Koy'}, 
+#       {'age': 11, 'name': 'Nathan'}, 
+#       {'age': 10, 'name': 'Zae'}
+#       ]
 
 ```
-### You have to create a class 
+### Complex sort
+
+
+### Sort class objects
 ```python
 class Student:
         def __init__(self, name, grade, age):
@@ -89,7 +99,8 @@ sorted(student_objects, key=lambda student: student.age)
 # OUT: [('dave', 'B', 10), ('jane', 'B', 12), ('john', 'A', 15)]         
 ```
 
-
+# Python2/3
+## 
 
 ## python symbols
 https://learnpythonthehardway.org/book/ex37.html
