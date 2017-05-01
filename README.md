@@ -24,12 +24,52 @@ l=['a','b','c']
 for x in l:
     print x    
 ```
+
+### List comprehension (Do stuff on a list)
+http://treyhunner.com/2015/12/python-list-comprehensions-now-in-color/
+
+```python
+old_list=[]
+new_list = [ "something with " + ITEM for ITEM in old_things if condition_based_on(ITEM)]
+#             ^-- this is returned -^                           ^- if ITEM meets condition
+
+```
+is the same as 
+```python
+new_things = []
+for ITEM in old_things:
+    if condition_based_on(ITEM):
+        new_things.append("something with " + ITEM)
+```
+
 ### For 
 
 
 ## Files
 
 ## Execute external command
+
+```python
+
+import subprocess
+
+try:
+    val=subprocess.check_output(["echo", "Hello World!"])
+    print("Value is: %s" % val)
+except subprocess.CalledProcessError:
+    print("Command failed: %s", subprocess.CalledProcessError.output)
+```
+
+### Pipe
+https://docs.python.org/2/library/subprocess.html#subprocess.Popen
+
+```python
+p1 = Popen(["dmesg"], stdout=PIPE)
+p2 = Popen(["grep", "hda"], stdin=p1.stdout, stdout=PIPE)
+p1.stdout.close()  # Allow p1 to receive a SIGPIPE if p2 exits.
+output = p2.communicate()[0]
+```
+
 
 ### Logging
 
